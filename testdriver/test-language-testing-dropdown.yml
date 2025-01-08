@@ -1,0 +1,24 @@
+version: 4.1.33
+steps:
+  - prompt: Hover over the "Language Testing" dropdown in the header.
+    commands:
+      - command: hover-text
+        text: Language Testing
+        description: dropdown in the header
+        action: hover
+  - prompt: Click on one of the dropdown options.
+    commands:
+      - command: hover-text
+        text: Companies
+        description: option in the Language Testing dropdown
+        action: click
+  - prompt: Assert that the page loads correctly for the selected option.
+    commands:
+      - command: assert
+        expect: AI-Powered Language Proficiency Testing for Companies
+  - prompt: >-
+      Assert that there are no errors on the new page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: no error messages like "404" or "Error" are visible on the page
