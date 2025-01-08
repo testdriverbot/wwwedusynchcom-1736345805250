@@ -1,0 +1,32 @@
+version: 4.1.33
+steps:
+  - prompt: Click on the "E-Proctoring" link in the navigation bar.
+    commands:
+      - command: hover-text
+        text: E-Proctoring
+        description: link in the navigation bar
+        action: click
+  - prompt: Assert that the e-proctoring page loads successfully.
+    commands:
+      - command: assert
+        expect: >-
+          Remote Proctoring made easy, accessible and affordable is visible on
+          the page
+  - prompt: >-
+      Assert that all relevant content and features are visible and functional. 
+      # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          Remote Proctoring made easy, accessible and affordable is visible on
+          the page
+      - command: assert
+        expect: >-
+          EduSynch E-Proctoring uses AI & human invigilators is visible on the
+          page
+      - command: assert
+        expect: User-friendly and non-invasive is visible on the page
+      - command: assert
+        expect: Affordable and scalable is visible on the page
+      - command: assert
+        expect: No exam scheduling is visible on the page
