@@ -1,0 +1,12 @@
+version: 4.1.33
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: >-
+      Click the button for the main call to action on the homepage  # Use the
+      content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Get Started
+        description: main call to action button on the homepage
+        action: click
