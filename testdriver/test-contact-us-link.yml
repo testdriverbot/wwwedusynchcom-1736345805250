@@ -1,0 +1,18 @@
+version: 4.1.33
+steps:
+  - prompt: Click on the "Contact Us" button in the navigation bar.
+    commands:
+      - command: hover-text
+        text: Contact Us
+        description: contact us button in the navigation bar
+        action: click
+  - prompt: Assert that the contact page loads successfully.
+    commands:
+      - command: assert
+        expect: We’d love to hear from you!
+  - prompt: >-
+      Assert that the contact form is visible and functional.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: contact form with fields and SEND button is visible
